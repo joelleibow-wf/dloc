@@ -30,8 +30,8 @@ part 'src/option.dart';
 part 'src/count.dart';
 part 'src/report.dart';
 
-void initialize(Properties properties) {
-  _initLog();
+void initialize(Properties properties, {bool silenceLogger: false}) {
+  if (!silenceLogger) _initLog();
   _initOptions(properties);
 }
 
